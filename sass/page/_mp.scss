@@ -808,7 +808,7 @@ section {
 }
 .leading {
   .flexSet {
-    padding: 0 5%;
+    padding: 0 5% 3em;
     .thumbnail {
       box-shadow: 0 0.5em 1.5em 1px rgba(0, 0, 0, 0.15);
       flex-basis: calc(100% / 3 - 4%);
@@ -973,7 +973,7 @@ section {
 .mpBlock1 {
   background: url('../images/bg1.jpg');
   background-size: cover;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 .mpBlock2 {
   scroll-margin-top: 150px;

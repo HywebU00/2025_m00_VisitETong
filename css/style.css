@@ -8757,7 +8757,7 @@ img {
     }
   }
   .leading .flexSet {
-    padding: 0 5%;
+    padding: 0 5% 3em;
   }
   .leading .flexSet .thumbnail {
     box-shadow: 0 0.5em 1.5em 1px rgba(0, 0, 0, 0.15);
@@ -8911,7 +8911,7 @@ img {
   .mpBlock1 {
     background: url("../images/bg1.jpg");
     background-size: cover;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
   }
   .mpBlock2 {
     scroll-margin-top: 150px;
