@@ -1,0 +1,170 @@
+footer {
+  position: relative;
+  clear: both;
+  text-align: left;
+  font-size: 0.938em;
+  padding: 1em 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: rgb(225, 225, 225);
+  background: linear-gradient(90deg, rgba(225, 225, 225, 1) 0%, rgba(254, 254, 254, 1) 25%, rgba(254, 254, 254, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  scroll-margin-top: 150px;
+  overflow: clip;
+  &:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(225, 225, 225);
+    background: linear-gradient(180deg, rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 0) 50%);
+  }
+  .flexEqual_3 {
+    .flexSet {
+      padding: 2em 0;
+      .col {
+        margin: 1em 0;
+        img {
+          float: left;
+          padding: 0.2em 1em 1em;
+          height: 65px;
+          width: auto;
+        }
+        .title {
+          font-size: rem(24);
+        }
+        p {
+          color: $colorWord;
+          font-size: rem(18);
+          margin: 0.3em 0;
+        }
+      }
+    }
+  }
+
+  .infoBox {
+    justify-content: space-between;
+    @include gutter;
+    border-top: solid 1px #e4e4e4;
+    padding: 1em 0 0;
+    & > div {
+      // padding-bottom: 1em;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      @include screen('tablet') {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .Copyright {
+    width: 100%;
+    display: block;
+    border-top: solid 1px #e4e4e4;
+    padding: 0.5em 30px;
+    margin-top: 1em;
+    color: #808080;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $colorWord;
+    &:hover,
+    &:focus-visible {
+      color: darken($colorPrimary, 0);
+      text-decoration: none;
+    }
+  }
+  .footerLogo {
+    flex: 0 1 280px;
+    img {
+      margin-left: 2em;
+    }
+    @include screen('mobile') {
+      flex: 1 1 100%;
+    }
+  }
+  .footerInfo {
+    flex: 1 1 calc(100% - 280px);
+    text-align: right;
+    @include screen('mobile') {
+      text-align: left;
+      padding-left: 2em;
+    }
+  }
+  .footerIcon {
+    flex: 0 1 200px;
+    text-align: right;
+    @include screen('tablet') {
+      flex: 1 1 100%;
+    }
+  }
+  // 版權連結
+  .footerLink {
+    @include liReset();
+    clear: both;
+    display: flex;
+    margin-bottom: 10px;
+    @include screen('mobile') {
+      flex-flow: row wrap;
+    }
+    li {
+      flex: 0 1 auto;
+      margin: 0px 5px 5px 0px;
+      @include screen('mobile') {
+        flex: 1 1 25%;
+      }
+      a {
+        display: block;
+        padding: 0.25em 1em;
+        background: $colorPrimary;
+        color: #fff;
+        text-align: center;
+        transition: 0.3s ease-out;
+        white-space: nowrap;
+        &:hover,
+        &:focus-visible {
+          background: darken($colorPrimary, 10);
+        }
+      }
+    }
+  }
+
+  .update,
+  .counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+      font-style: normal;
+      color: $colorPrimary;
+      padding: 0 0.5em;
+    }
+  }
+  .footerIcon {
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &:focus-visible {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 150px;
+    }
+  }
+}
