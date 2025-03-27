@@ -532,7 +532,7 @@ function webSearch() {
 // -----------------------------------------------------------------------
 
 function mainMenuSetup() {
-  'use strict';
+  ('use strict');
   // menu初始化 新增側欄選單
   const body = document.querySelector('body');
   const sidebar = document.createElement('aside');
@@ -794,6 +794,14 @@ function mainMenuSetup() {
     hideSidebar();
     menuOverlay ? menuOverlay.style.removeProperty('z-index') : null;
   });
+  // 點擊側邊選單連結時，自動關閉 sidebar
+  asideMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (!link.parentElement.classList.contains('hasChild')) {
+        hideSidebar();
+      }
+    });
+  });
 
   // 隱藏側邊選單函式
   function hideSidebar() {
@@ -870,19 +878,19 @@ function navSticky() {
     let currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-      // 向下滾動，當滾動超過 60px，隱藏 topbar
-      if (currentScrollY > 60 && !isTopbarHidden) {
+      // 向下滾動，當滾動超過 30px，隱藏 topbar
+      if (currentScrollY > 30 && !isTopbarHidden) {
         topbar.classList.add('hidden');
         isTopbarHidden = true;
       }
-      // 當滾動超過 36px，讓 header 變 sticky
-      if (currentScrollY > 36 && !isSticky) {
+      // 當滾動超過 30px，讓 header 變 sticky
+      if (currentScrollY > 30 && !isSticky) {
         header.classList.add('sticky');
         isSticky = true;
       }
     } else {
-      // 向上滾動，當滾動少於 60px，顯示 topbar
-      if (currentScrollY <= 60 && isTopbarHidden) {
+      // 向上滾動，當滾動少於 30px，顯示 topbar
+      if (currentScrollY <= 30 && isTopbarHidden) {
         topbar.classList.remove('hidden');
         isTopbarHidden = false;
       }

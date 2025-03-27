@@ -95,12 +95,8 @@ section {
     letter-spacing: 1px;
     line-height: 1.3em;
     margin: 1em 0;
-
-    @include screen('tablet') {
-      font-size: rem(36);
-    }
     @include screen('mobile') {
-      font-size: rem(32);
+      font-size: rem(40);
     }
   }
 
@@ -791,8 +787,12 @@ section {
     margin: 4rem 5% 0;
 
     @include screen('tablet') {
-      font-size: rem(36);
-      padding: 0 3% 0;
+      // font-size: rem(38);
+      padding: 0;
+    }
+    @include screen('mobile') {
+      margin: 2rem 5% 0;
+      font-size: rem(40);
     }
   }
   p {

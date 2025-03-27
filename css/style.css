@@ -8409,14 +8409,9 @@ img {
     line-height: 1.3em;
     margin: 1em 0;
   }
-  @media screen and (max-width: 991px) {
-    section .titleBox {
-      font-size: 2.25rem;
-    }
-  }
   @media screen and (max-width: 767px) {
     section .titleBox {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   }
   section .listBox {
@@ -8740,8 +8735,13 @@ img {
   }
   @media screen and (max-width: 991px) {
     .leadingBox .titleBox {
-      font-size: 2.25rem;
-      padding: 0 3% 0;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .leadingBox .titleBox {
+      margin: 2rem 5% 0;
+      font-size: 2.5rem;
     }
   }
   .leadingBox p {
