@@ -980,14 +980,14 @@ section {
   overflow: clip;
 }
 .mpBlock3 {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 60px;
   overflow: clip;
 }
 .mpBlock4 {
   background: url('../images/bg2.jpg');
   background-size: cover;
   padding: 5em 0;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 60px;
   overflow: clip;
   @include screen('mobile') {
     padding: 3em 0;
