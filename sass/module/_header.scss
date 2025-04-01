@@ -98,7 +98,6 @@
   left: 0;
   z-index: 99;
   // transition: 0.3s ease-in;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 15px -1px, rgba(0, 0, 0, 0.3) 0px 1px 13px -1px;
 
   @include screen('mobile') {
     position: fixed;
@@ -115,11 +114,12 @@
     background: rgba(255, 255, 255, 1);
     // background: $colorPrimary;
     // height: 40px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 15px -1px, rgba(0, 0, 0, 0.3) 0px 1px 13px -1px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 15px -1px, rgba(0, 0, 0, 0.3) 0px 1px 13px -1px;
     pointer-events: none;
     z-index: -1;
     transition: all 0.5s;
     backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -1px;
 
     @include screen('mobile') {
       height: 60px;
