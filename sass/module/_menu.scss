@@ -48,6 +48,9 @@
         &:focus-visible {
           box-shadow: 0 0 0 2px inset $aHover;
         }
+        @include screen('tablet') {
+          padding: 0 0.5em;
+        }
       }
 
       &.hasChild {

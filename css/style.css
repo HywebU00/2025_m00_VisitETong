@@ -4336,6 +4336,11 @@ img {
   .mainMenu > ul > li > a:focus-visible {
     box-shadow: 0 0 0 2px inset #e66150;
   }
+  @media screen and (max-width: 991px) {
+    .mainMenu > ul > li > a {
+      padding: 0 0.5em;
+    }
+  }
   .mainMenu > ul > li.hasChild > a:after {
     content: "";
     width: 4px;
@@ -8438,7 +8443,7 @@ img {
   }
   .mpBigimg .imgContainer img {
     width: 100%;
-    aspect-ratio: 4/2;
+    aspect-ratio: 4/1.85;
     display: block;
     object-fit: contain;
     object-position: 50% 50%;
@@ -8447,6 +8452,23 @@ img {
     width: 100%;
     object-fit: cover;
   }
+  @media screen and (max-width: 1399px) {
+    .mpBigimg .imgContainer {
+      overflow: hidden;
+      position: relative;
+    }
+    .mpBigimg .imgContainer img {
+      width: 100%;
+      aspect-ratio: 4/2.1;
+      display: block;
+      object-fit: contain;
+      object-position: 50% 50%;
+    }
+    .mpBigimg .imgContainer img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   @media screen and (max-width: 991px) {
     .mpBigimg .imgContainer {
       overflow: hidden;
@@ -8454,7 +8476,7 @@ img {
     }
     .mpBigimg .imgContainer img {
       width: 100%;
-      aspect-ratio: 4/2.5;
+      aspect-ratio: 4/2.3;
       display: block;
       object-fit: contain;
       object-position: 50% 50%;

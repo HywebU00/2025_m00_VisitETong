@@ -518,7 +518,7 @@ section {
 
 .mpBigimg {
   .imgContainer {
-    @include aspectRatio(4, 2);
+    @include aspectRatio(4, 1.85);
     overflow: hidden;
     position: relative;
     // &:before {
@@ -537,15 +537,15 @@ section {
       width: 100%;
       object-fit: cover;
     }
-    // @include screen('notebook') {
-    //   @include aspectRatio(4, 2);
-    //   img {
-    //     width: 100%;
-    //     object-fit: cover;
-    //   }
-    // }
+    @include screen('notebook') {
+      @include aspectRatio(4, 2.1);
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     @include screen('tablet') {
-      @include aspectRatio(4, 2.5);
+      @include aspectRatio(4, 2.3);
       img {
         width: 100%;
         object-fit: cover;
