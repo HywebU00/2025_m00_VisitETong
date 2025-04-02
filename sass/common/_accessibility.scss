@@ -23,6 +23,11 @@ a:focus-visible {
     display: none;
   }
 }
+.main {
+  .accessKey {
+    top: 40px;
+  }
+}
 
 a.goCenter {
   position: absolute;
