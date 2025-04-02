@@ -93,7 +93,7 @@ section {
     font-weight: 600;
     // padding: 2rem 0 0;
     letter-spacing: 1px;
-    line-height: 1.3em;
+    line-height: 1.5em;
     margin: 1em 0;
     @include screen('mobile') {
       font-size: rem(40);
@@ -518,7 +518,7 @@ section {
 
 .mpBigimg {
   .imgContainer {
-    @include aspectRatio(4, 1.85);
+    @include aspectRatio(4, 1.9);
     overflow: hidden;
     position: relative;
     // &:before {
@@ -538,14 +538,21 @@ section {
       object-fit: cover;
     }
     @include screen('notebook') {
-      @include aspectRatio(4, 2.1);
+      @include aspectRatio(4, 2.3);
       img {
         width: 100%;
         object-fit: cover;
       }
     }
     @include screen('tablet') {
-      @include aspectRatio(4, 2.3);
+      @include aspectRatio(4, 2.8);
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    @include screen('mobile') {
+      @include aspectRatio(4, 3);
       img {
         width: 100%;
         object-fit: cover;
@@ -553,7 +560,7 @@ section {
     }
 
     @include screen('xsMobile') {
-      @include aspectRatio(4, 5);
+      @include aspectRatio(4, 5.2);
       img {
         width: 100%;
         object-fit: cover;
@@ -609,7 +616,7 @@ section {
       //   font-size: rem(28);
       // }
       @include screen('xsMobile') {
-        font-size: rem(64);
+        font-size: rem(52);
       }
     }
     h3 {
@@ -682,8 +689,11 @@ section {
   }
   .titleBox {
     margin: 0;
-    padding: 2em 0 1.5em;
+    padding: 2em 3% 1.5em;
     font-size: rem(40);
+    @include screen('mobile') {
+      font-size: rem(32);
+    }
   }
   .flexSet {
     padding: 0 5%;
@@ -783,6 +793,9 @@ section {
         padding: 0.3em 0.8em 0.36em;
         line-height: 1em;
         z-index: 2;
+        @include screen('tablet') {
+          bottom: 5.2em;
+        }
       }
       p {
         font-size: rem(18);
@@ -795,6 +808,9 @@ section {
         bottom: 2em;
         @include textLine(2, 1.5em);
         z-index: 2;
+        @include screen('tablet') {
+          bottom: 1em;
+        }
       }
     }
   }
@@ -815,8 +831,8 @@ section {
       padding: 0;
     }
     @include screen('mobile') {
-      margin: 2rem 5% 0;
-      font-size: rem(40);
+      margin: 2rem 3% 0;
+      font-size: rem(36);
     }
   }
   p {

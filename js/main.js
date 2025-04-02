@@ -878,13 +878,13 @@ function navSticky() {
     let currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-      // 向下滾動，當滾動超過 30px，隱藏 topbar
-      if (currentScrollY > 30 && !isTopbarHidden) {
+      // 向下滾動，當滾動超過 20px，隱藏 topbar
+      if (currentScrollY > 20 && !isTopbarHidden) {
         topbar.classList.add('hidden');
         isTopbarHidden = true;
       }
-      // 當滾動超過 30px，讓 header 變 sticky
-      if (currentScrollY > 30 && !isSticky) {
+      // 當滾動超過 20px，讓 header 變 sticky
+      if (currentScrollY > 20 && !isSticky) {
         header.classList.add('sticky');
         isSticky = true;
       }
