@@ -330,7 +330,17 @@
                 </div>
               </div>
               <div class="btnGrp wow fadeInUp" data-wow-duration="2s" data-wow-delay="2.5s">
-                <button class="btn btn-submit">立即聯絡了解全新數位化移工訪查系統</button>
+                <button id="contactBtn" class="btn btn-submit" type="button">立即聯絡了解全新數位化移工訪查系統</button>
+                <script>
+                  document.getElementById('contactBtn').addEventListener('click', function () {
+                    const width = window.innerWidth * 0.8;
+                    const height = window.innerHeight * 0.8;
+                    const left = (window.innerWidth - width) / 2;
+                    const top = (window.innerHeight - height) / 2;
+
+                    window.open('https://reurl.cc/EV86zR', '_blank', `width=${width},height=${height},left=${center},top=${top},resizable=yes,scrollbars=yes`);
+                  });
+                </script>
               </div>
             </div>
           </section>
